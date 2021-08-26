@@ -1,8 +1,5 @@
 :root{
-    --Color_header:#08f;
-}
-::-webkit-scrollbar{
-  display: none;
+    --color_header:#08f;
 }
 *{
     margin: 0;
@@ -11,29 +8,46 @@
 }
 body{
     font-size: 16px;
+    max-width: 1480px;
     font-family: 'Roboto', sans-serif;
 }
+::-webkit-scrollbar{
+    display: none;
+  }
 nav{
     width: 100%;
-    padding: .3rem 0;
+    padding: .7rem 0;
     background: #fff;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
+
+}
+nav img{
+    height: 2rem;
+    padding-left: 3.5em;
 }
 nav a{
+    margin-left: 6rem;
+    text-decoration: none;
+    font-size: 1.4rem;
     color: black;
+}
+nav a span{
+    color: var(--color_header);
+}
+.nav--link{
     text-decoration: none;
     float: right;
-    font-size: 1.1em;
-    margin: 0 4em;
+    padding: .2rem .5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4rem;
+    font-size: 1.1rem;
 }
-.branding{
-  font-size: 1.4em;
-  margin: .30em 4em;
+.nav--link:hover{
+    color: var(--color_header);
+    transition: .25s;
 }
-
-.Header{
+.header{
     width: 100%;
     display: flex;
     padding: 4rem 2rem 0;
@@ -41,76 +55,92 @@ nav a{
     font-size: 2rem;
     color: #fff;
 }
-.Header img{
+.header img{
     width: 40%;
 }
-.Header h1{
+.header h1{
     padding: 5rem 0 0;
 }
-.Header_Relleno{
+.header_relleno{
     width: 100%;
     height: 19rem;
     position: absolute;
     top: 0;
     z-index: -1;
-    background: var(--Color_header);
+    background: var(--color_header);
 }
-.Header_Ola div{
+.header_ola{
     position: absolute;
     width: 100%;
     top: 19rem;
     z-index: -1;
 }
-.Section_Id-Page{
+.section{
     display: flex;
     width: 100%;
     margin: 8rem 0 0;
     padding: 0 3rem;
+    flex-direction: row;
 
 }
-.Section_Id-Page img {
+.section img {
     width: 34%;
 }
-.Section_Id-Page div{
-    text-align: center;
-    margin: 4rem  3rem 0;
+.section div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 3rem;
 }
-.Section_Id-Page div h2{
-    font-size: 1.5rem;
+.heading-2{
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
 }
-.Section_Id-Page div p{
+.text{
     font-size: 1.2rem;
     text-align: justify;
 }
-.Section_Id-P h2{
-    margin: 3rem 0 0;
-} 
-.Section_We{
+.section--reverse{
+    flex-direction: row-reverse;
+}
+.section--reverse div{
+    margin: 0 3rem 0 0;
+}
+.section--center{
     width: 100%;
-    background: var(--Color_header);
+    flex-direction: column;
+    align-items: center;
+    background: var(--color_header);
     margin: 1rem 0 0;
-    padding: 2rem 3rem;
     text-align: center;
     color: #fff;
-}
-.Section_We h2{
-    font-size: 2rem;
-}
-.Section_We p{
-    text-align: justify;
     padding: 2rem 10rem ;
 }
-.Section_We img{
-    width: 40%;
+
+.section--center img{
+    width: 60%;
 }
 footer{
     display: flex;
-    padding: 1rem 0;
+    padding: 1rem 0 .5rem;
     justify-content: center;
     width: 100%;
-    background: black;
+    background: #000;
     gap: 1rem;
 }
+footer span{
+    height: 2.5rem;
+    width:2.7rem;
+    color: #fff;
+}
+footer span i{
+    margin-top: .25rem;
+    font-size: 2rem;
+}
+
+
+
 
 
 
